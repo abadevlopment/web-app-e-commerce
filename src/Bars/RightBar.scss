@@ -1,0 +1,104 @@
+/* Color Theme Swatches in Hex */
+
+$ct1h: #44428c;
+$ct2h: #f2b90f;
+$ct3h: #f2a30f;
+$ct4h: #f2dfbb;
+$ct5h: #f2561d;
+$ct6h: #fff3ea;
+
+/* Color Theme Swatches in RGBA */
+
+$ct1r: rgba(68, 66, 140, 1);
+$ct2r: rgba(242, 185, 15, 1);
+$ct3r: rgba(242, 163, 15, 1);
+$ct4r: rgba(242, 223, 187, 1);
+$ct5r: rgba(242, 86, 29, 1);
+$ct6r: rgba(255, 243, 234, 1);
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//font-family: 'Space Mono', monospace;
+// -webkit-
+// -moz-
+// -o-
+// -ms-
+
+.rightBar {
+    background-color: $ct3r;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% auto;
+    grid-template-areas: "rch" "rcb";
+    .rcHeader {
+        // border: green solid 1px;
+        // background-color: green;
+        grid-area: rch;
+        margin: 2vh;
+        @include center;
+        // border-radius: 3vh;
+        // margin: 1.5vh 1.5vh 2.5vh 1.5vh;
+        // margin: 1.5vh;
+        // @include center;
+    }
+    .rcBody {
+        // background-color: red;
+        background-color: $ct3r;
+        grid-area: rcb;
+        // height: 40%;
+        border-radius: 4vh;
+        // margin: 0 2vh 0 2vh;
+        // @include center;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: flex-start;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 40%;
+        grid-template-areas:
+            "ba"
+            "be";
+        .bodyAds {
+            grid-area: ba;
+            // background-color: blue;
+            // border: red solid 1px;
+            height: 100%;
+            width: 100%;
+            border-radius: 4vh;
+            overflow: hidden;
+            @include center;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: flex-start;
+            // align-items: center;
+            .adBase {
+                background-color: $ct3r;
+                height: 100%;
+                width: 100%;
+                margin: 0 0 4vh 0;
+                border-radius: 4vh;
+                overflow: hidden;
+                @include center;
+            }
+        }
+        .bodyExtra {
+            grid-area: be;
+            // border: solid $ct2r 1px;
+            border: solid red 1px;
+            background-color: $ct3r;
+            // background-color: green;
+            height: 100%;
+            width: 100%;
+            border-radius: 4vh;
+        }
+        // .bodyExtra2{
+        //     background-color: white;
+        //     height: 40%;
+        //     width: 100%;
+        //     border-radius: 3vh;
+        // }
+    }
+}

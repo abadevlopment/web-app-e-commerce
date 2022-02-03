@@ -1,0 +1,97 @@
+/* Color Theme Swatches in Hex */
+
+$ct1h: #44428C;
+$ct2h: #F2B90F;
+$ct3h: #F2A30F;
+$ct4h: #F2DFBB;
+$ct5h: #F2561D;
+$ct6h: #FFF3EA;
+
+/* Color Theme Swatches in RGBA */
+
+$ct1r: rgba(68, 66, 140, 1);
+$ct2r: rgba(242, 185, 15, 1);
+$ct3r: rgba(242, 163, 15, 1);
+$ct4r: rgba(242, 223, 187, 1);
+$ct5r: rgba(242, 86, 29, 1);
+$ct6r: rgba(255, 243, 234, 1);
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//font-family: 'Space Mono', monospace;
+// -webkit-
+// -moz-
+// -o-
+// -ms-
+
+.contentHeader{
+    font-family: 'Space Mono', monospace;
+    .headerBody{
+        height: 60%;
+        width: 92%;
+        display: grid;
+        grid-template-columns: 27% auto 27%;
+        grid-template-rows: 100%;
+        grid-template-areas:
+        'hbc ht hb';
+        .headerBreadCrumb{
+            grid-area: hbc;
+            font-size: 1.4vh;
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .breadCrumbContainer{
+                height: 50%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        display: inline;
+                        color: black;
+                        p{
+                            display: inline;
+                            padding: 0;
+                            margin: 0;
+                            color: $ct6r;
+                        }
+                        a{
+                            color: $ct6r;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        .headerTitle{
+            grid-area: ht;
+            @include center;
+            p{
+                font-weight: bolder;
+                font-size: 5vh;
+                letter-spacing: -2px;
+            }
+        }
+        .headerButtons{
+            grid-area: hb;            
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 1.5vh;
+            font-weight: bold;
+            .buttonsContainer{
+                height: 50%;
+                width: 100%;                
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+    }
+}

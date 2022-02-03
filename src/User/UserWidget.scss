@@ -1,0 +1,82 @@
+/* Color Theme Swatches in Hex */
+
+$ct1h: #44428C;
+$ct2h: #F2B90F;
+$ct3h: #F2A30F;
+$ct4h: #F2DFBB;
+$ct5h: #F2561D;
+$ct6h: #FFF3EA;
+
+/* Color Theme Swatches in RGBA */
+
+$ct1r: rgba(68, 66, 140, 1);
+$ct2r: rgba(242, 185, 15, 1);
+$ct3r: rgba(242, 163, 15, 1);
+$ct4r: rgba(242, 223, 187, 1);
+$ct5r: rgba(242, 86, 29, 1);
+$ct6r: rgba(255, 243, 234, 1);
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//font-family: 'Space Mono', monospace;
+// -webkit-
+// -moz-
+// -o-
+// -ms-
+
+.navUser {
+    background-color: transparent;
+    // background-color: green;
+    border-radius: 3vh;
+    margin: 1.5vh 1.5vh 1.5vh 1.5vh;
+    font-family: 'Space Mono', monospace;
+    font-weight: bolder;
+    font-size: 1.7vh;
+    
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'un ul ua';
+
+    .userNotification{
+        // border: red solid 1px;
+        grid-area: un;
+        height: 100%;
+        // @include center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .notificationIcon{
+            max-height: 60%;
+            width: auto;
+        }
+    }
+    .userLogin{
+        // border: red solid 1px;
+        grid-area: ul;
+        height: 100%;
+        @include center;
+        p{
+            font-size: 1.7vh;
+            line-height: 1.25;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .userAvatar{
+        // border: red solid 1px;
+        grid-area: ua;
+        height: 100%;
+        // @include center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .avatarIcon{
+            max-height: 60%;
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+/* Color Theme Swatches in Hex */
+
+$ct1h: #44428c;
+$ct2h: #f2b90f;
+$ct3h: #f2a30f;
+$ct4h: #f2dfbb;
+$ct5h: #f2561d;
+$ct6h: #fff3ea;
+
+/* Color Theme Swatches in RGBA */
+
+$ct1r: rgba(68, 66, 140, 1);
+$ct2r: rgba(242, 185, 15, 1);
+$ct3r: rgba(242, 163, 15, 1);
+$ct4r: rgba(242, 223, 187, 1);
+$ct5r: rgba(242, 86, 29, 1);
+$ct6r: rgba(255, 243, 234, 1);
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//font-family: 'Space Mono', monospace;
+// -webkit-
+// -moz-
+// -o-
+// -ms-
+.navCart {
+    background-color: transparent;
+    // background-color: green;
+    height: 100%;
+    width: 75%;
+    // margin: 2vh;
+    border-radius: 3vh;
+    font-family: 'Space Mono', monospace;
+    font-weight: bolder;
+    font-size: 1.7vh;
+    display: grid;
+    grid-template-columns: 20% 12% 20% 48%;
+    grid-template-rows: 100%;
+    // grid-template-areas: 'cq ca ci ct';
+    grid-template-areas: 'ci ca cq ct';
+    .cartQty {
+        // border: yellow solid 1px;
+        grid-area: cq;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        // @include center;
+        .qtySpan {
+            border: $ct4r solid 1px;
+            background-color: $ct6r;
+            // border: yellow solid 1px;
+            // background-color: yellow;
+            // font-size: 2vh;
+            margin: 3px 0 0 2px;
+            padding: 0 5px 0 5px;
+            border-radius: 10vh;
+        }
+    }
+    .cartArrow {
+        // border: yellow solid 1px;
+        grid-area: ca;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        // justify-content: flex-start;
+        justify-content: center;
+        .arrowImg {
+            max-height: 45%;
+            width: auto;
+            // border: blue solid 1px;
+            margin: 3px 0 0 3px;
+        }
+    }
+    .cartIcon {
+        // border: yellow solid 1px;
+        grid-area: ci;
+        height: 100%;
+        // @include center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        .cartImg {
+            // transform: scaleX(-1);
+            max-height: 70%;
+            width: auto;
+            // border: blue solid 1px;
+            margin: 0 0 4px 0;
+        }
+    }
+    .cartTotal {
+        // border: yellow solid 1px;
+        grid-area: ct;
+        font-size: 2.25vh;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
