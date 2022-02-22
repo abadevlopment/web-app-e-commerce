@@ -1,0 +1,45 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// -webkit-
+// -moz-
+// -o-
+// -ms-
+
+.searchForm {
+//   border: blue solid 1px;
+  height: 90%;
+  width: 100%;
+  //   border-radius: 10vh;
+  //   overflow: hidden;
+  position: relative;
+  .searchInput {
+    font-size: 2vh;
+    padding-left: 1vh;
+    height: 100%;
+    width: 100%;
+    border-radius: 10vh;
+    //   position: absolute;
+  }
+  .searchButton {
+    // background-color: red;
+    background-color: transparent;
+    border: none;
+    height: 90%;
+    width: 15%;
+    border-radius: 10vh;
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    @include center();
+    .searchImg{
+        max-height: 85%;
+        width: auto;
+    }
+  }
+  .searchInput:focus-visible {
+    border: red solid 5px;
+  }
+}

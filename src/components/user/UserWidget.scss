@@ -1,0 +1,48 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// -webkit-
+// -moz-
+// -o-
+// -ms-
+
+.userWButton {
+  height: 90%;
+  width: 100%;
+  border-radius: 20vh;
+  padding: 5px;
+  display: flex;
+  .userWNotification {
+    height: 100%;
+    width: 15%;
+    @include center();
+    .notificationIcon {
+        max-height: 90%;
+        width: auto;
+    }
+}
+.userWName {
+    height: 100%;
+    width: 70%;
+    overflow: hidden;
+    @include center();
+    .loginName {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.9vh;
+        line-height: 0.75;
+        letter-spacing: -0.75PX;
+    }
+  }
+  .userWAvatar {
+    height: 100%;
+    width: 15%;
+    @include center();
+    .avatarIcon {
+      max-height: 90%;
+      width: auto;
+    }
+  }
+}

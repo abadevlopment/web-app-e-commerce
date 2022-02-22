@@ -1,0 +1,74 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// -webkit-
+// -moz-
+// -o-
+// -ms-
+
+.cartWButton {
+  height: 90%;
+  width: 100%;
+  border-radius: 20vh;
+  padding: 5px;
+  display: flex;
+  .cartWIcon {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    .cartWImg {
+      max-height: 100%;
+      width: auto;
+    }
+  }
+  .cartWArrow {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    .arrowWImg {
+      max-height: 70%;
+      width: auto;
+    }
+  }
+  .cartQty {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    .qtyspan {
+      background-color: red;
+      font-size: 1.3vh;
+      font-weight: bold;
+      letter-spacing: -1px;
+      height: 60%;
+      width: 100%;
+      padding: 3px;
+      border-radius: 5vh;
+      @include center();
+    }
+  }
+  .cartTotal {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    font-size: 1.7vh;
+    letter-spacing: -0.75px;
+    font-weight: bold;
+    @include center();
+  }
+}
+// #cartWidgetModal{
+//   .modal-dialog {
+//     position: fixed;
+//     margin: auto;
+//     right: 0px;
+//     top: 12%;
+//   }
+
+// }

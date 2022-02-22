@@ -1,0 +1,65 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// -webkit-
+// -moz-
+// -o-
+// -ms-
+
+.contact-container {
+  border: red solid 1px;
+  height: 100%;
+  width: 100%;
+  .extra-container {
+    border: black solid 1px;
+    background-color: red;
+    height: 30%;
+    width: 100%;
+    border-radius: 4vh;
+    .ad1-container {
+      height: 100%;
+      width: 100%;
+      @include center();
+    }
+  }
+  .contact-body {
+    border: black solid 1px;
+    height: 30%;
+    width: 100%;
+    margin: 1vh 0 0 0;
+    .background-container {
+      background-color: red;
+      height: 100%;
+      width: 100%;
+      border-radius: 4vh;
+      .background-header {
+        border: green solid 1px;
+        height: 25%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .background-body {
+        border: green solid 1px;
+        height: 207%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        .contact-body-container {
+          border: red solid 1px;
+          background-color: white;
+          height: 95%;
+          width: 90%;
+          border-radius: 3vh;
+          @include center();
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-container {
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+  border-radius: 4vh;
+  .background-header {
+    border: green solid 1px;
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .background-body {
+    border: green solid 1px;
+    // background-color: blue;
+    height: 207%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .sales-container {
+      border: orangered solid 1px;
+      height: 100%;
+      width: 90%;
+      overflow: auto;
+
+      // /* Hide scrollbar for IE, Edge and Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      .sales-body {
+        border: red solid 1px;
+        background-color: white;
+        height: 45%;
+        width: 100%;
+        border-radius: 3vh;
+        margin: 0 0 5% 0;
+        @include center();
+      }
+    }
+    .sales-container::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+// .salesContainer::-webkit-scrollbar {
+//   display: none;
+// }
+// .example::-webkit-scrollbar {
+//   display: none;
+// }
+// /* Hide scrollbar for IE, Edge and Firefox */
+// .example {
+//   -ms-overflow-style: none;  /* IE and Edge */
+//   scrollbar-width: none;  /* Firefox */
+// }
+
+// TABLET HORIZONTAL
+// @media only screen and (min-width: 768px) and (max-width: 1023px) {
+// }
